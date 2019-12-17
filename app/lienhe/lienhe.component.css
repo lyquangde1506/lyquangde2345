@@ -1,0 +1,10 @@
+h1{
+    text-align: center;
+    color: red
+}
+.contact {
+    max-width: 100%;
+    margin: 0 auto;
+    background: #777(0, 0, 0, 0.5);
+    padding: 50px;
+}

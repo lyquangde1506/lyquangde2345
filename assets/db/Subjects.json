@@ -1,0 +1,22 @@
+[
+    {
+        "Id": "ADUI",
+        "Name": "Thiết kế giao diện trên Android",
+        "Logo": "ADUI.jpg"
+    },
+    {
+        "Id": "DBAV",
+        "Name": "SQL Server",
+        "Logo": "DBAV.png"
+    },
+    {
+        "Id": "DBBS",
+        "Name": "Cơ sở dữ liệu",
+        "Logo": "DBBS.png"
+    },
+    {
+        "Id": "WEBU",
+        "Name": "Xây dựng trang web",
+        "Logo": "WEBU.jpg"
+    }
+]

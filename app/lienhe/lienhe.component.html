@@ -1,0 +1,128 @@
+<div class="container">
+    <h4 class="text-center" style="color:orange"> FPT POLYTECHNIC CƠ SỞ TP. HỒ CHÍ MINH </h4>
+    <div class="row">
+        <div class="card">
+            <img src="/assets/images/h2.jpg" height="300px" width="1100px" alt="">
+        </div>
+    </div>
+    <br>
+    <hr>
+    <div class="row">
+        <article class="col-sm-7">
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 1 :</strong> <i>391A Nam Kỳ Khởi Nghĩa, Phường 7,Quận 3,
+                    TP.
+                    Hồ Chí Minh</i>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 2 :</strong> <i>778/B1 Nguyễn Kiệm, Phường 4, Quận Phú
+                    Nhuận,
+                    TP. Hồ Chí Minh</i>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 3 : </strong> <i>Toà nhà Innovation, lô 24, Công viên phần
+                    mềm
+                    Quang Trung, Quận 12, Hồ Chí Minh.</i>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663"> Điện thoại: </strong> Phòng Tư vấn tuyển sinh: <b
+                    style="color:orange">(028)3526 8799</b> hoặc
+                <b style="color:orange">(028)6252 3434</b>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663"> Email: </strong> caodangfpt.hcm@fpt.edu.vn
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Lịch làm việc </th>
+                    <th>Sáng</th>
+                    <th>Chiều</th>
+                </tr>
+                <tr>
+                    <td>Thứ Hai đến Thứ Sáu</td>
+                    <td>8:00 - 12:00</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Thứ Bảy</td>
+                    <td>8:00 - 12:00</td>
+                    <td>Nghỉ</td>
+                </tr>
+                <tr>
+                    <td>Chủ Nhật</td>
+                    <td>Nghỉ</td>
+                    <td>Nghỉ</td>
+                </tr>
+            </table>
+        </article>
+        <aside class="col-sm-5">
+            <div class="card">
+                <div class="card-header">
+                    <strong class="accordion"><i class="fas fa-envelope"></i> Hãy để lại lời nhắn , chúng tôi sẽ liên
+                        lạc với bạn</strong>
+                </div>
+                <div>
+                    <form action="lienhe.html">
+                        <input class="form-control" name="fullname" id="name" placeholder="Xin mời nhập Họ Tên"
+                            [(ngModel)]="inf.name" required minlength="4" #fullname="ngModel">
+                        <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)"
+                            class="col alert alert-danger" role="alert">
+                            Vui lòng điền họ và tên
+                        </div>
+                        <br>
+                        <input pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" class="form-control" name="email"
+                            [(ngModel)]="inf.email" required #email="ngModel"
+                            placeholder="Email (để tôi liên hệ với bạn)">
+                        <div *ngIf="email.invalid  && (email.dirty || email.touched)" class="col alert alert-danger"
+                            role="alert">
+                            Vui lòng điền email
+                        </div>
+                        <br>
+                        <input type="number" class="form-control" name="phone" maxlength="11" [(ngModel)]="inf.phone"
+                            required #phone="ngModel" placeholder="Xin mời nhập Số điện thoại">
+                        <div *ngIf="phone.invalid  && (phone.dirty || phone.touched)" class="col alert alert-danger"
+                            role="alert">
+                            Vui lòng điền số điện thoại
+                        </div>
+                        <br>
+                        <select name="" id="inputGroupSelect" class="form-control">
+                            <option selected>Chọn cơ sở nhập học</option>
+                            <option value="1">Tư vấn tuyển sinh Hà Nội</option>
+                            <option value="2">Tư vấn tuyển sinh TP.HCM</option>
+                            <option value="3">Tư vấn tuyển sinh Tây Nguyên</option>
+                            <option value="4">Tư vấn tuyển sinh Đà Nẵng</option>
+                            <option value="5">Tư vấn tuyển sinh Cần Thơ</option>
+                        </select>
+                        <br>
+                        <div> Đăng nhập bằng :
+                            <a 
+                                href="https://www.facebook.com/dialog/oauth?client_id=521984397965108&redirect_uri=https%3A%2F%2Fstatic.subiz.com%2Foauth%2Ffacebook&scope=email&display=popup&state=aHR0cHM6Ly9jYW9kYW5nLmZwdC5lZHUudm4vdHV5ZW4tc2luaC1jYW8tZGFuZy14ZXQtdHV5ZW4jIQ=="><i
+                                    class="fab fa-facebook-square"></i> </a>
+                            ||
+                            <a 
+                                href="https://accounts.google.com/signin/oauth/oauthchooseaccount?client_id=76591952772-5m2c3058kt9g9d4oq0s2emm3nbodqtt9.apps.googleusercontent.com&as=RqDSC-zDMV8wOOzv0WCx0A&destination=https%3A%2F%2Fstatic.subiz.com&approval_state=!ChROQlpkSVRMRHF4WDFTM1ItS3huNBIfNDRZdmFvOGdVYnNYOEhuU1JuY2dubXFPdFhzMndSWQ%E2%88%99AJDr988AAAAAXTVj3bu5t8dl3hzw3xzZhGaNB0-2YArp&oauthgdpr=1&xsrfsig=ChkAeAh8TwaVBjCdqOh5PgPJ8HFkaaB7mZR-Eg5hcHByb3ZhbF9zdGF0ZRILZGVzdGluYXRpb24SBXNvYWN1Eg9vYXV0aHJpc2t5c2NvcGU&flowName=GeneralOAuthFlow"><i
+                                    class="fab fa-google-plus-g"></i></a>
+                        </div> <br>
+                        <textarea name="mess" rows="3" class="form-control" [(ngModel)]="inf.mess" #mess="ngModel"
+                            required placeholder=" Để lại lời nhắn cho chúng tôi"></textarea>
+                        <div *ngIf="mess.invalid && (mess.dirty || mess.touched)" class="col alert alert-danger"
+                            role="alert">
+                            Để lại lời nhắn cho chúng tôi
+                        </div>
+                        <div class="text-center">
+                            <button style="width: 100%" class="btn btn-warning" (click)="onClick()">Gửi tin nhắn</button>
+                        </div>
+                        <div *ngIf="isShow" class="col alert alert-danger" role="alert">
+                            {{result}}
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>

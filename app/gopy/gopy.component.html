@@ -1,0 +1,95 @@
+<div class="container">
+    <div class="row">
+        <div class="card">
+            <div class="col-sm-4">
+                <img src="/assets/images/h3.jpg" height="300px" width="1100px" alt="">
+            </div>
+        </div>
+    </div>
+    <br>
+    <h4 class="text-center" style="color: orange">FPT POLYTECHNIC CƠ SỞ TP.HỒ CHÍ MINH</h4>
+    <hr>
+    <div class="row">
+        <article class="col-sm-8">
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 1 :</strong> <i>391A Nam Kỳ Khởi Nghĩa, Phường 7,Quận 3, TP.
+                        Hồ Chí Minh</i>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 2 :</strong> <i>778/B1 Nguyễn Kiệm, Phường 4, Quận Phú Nhuận,
+                        TP. Hồ Chí Minh</i> 
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663">Địa chỉ cơ sở 3 : </strong> <i>Toà nhà Innovation, lô 24, Công viên phần mềm
+                        Quang Trung, Quận 12, Hồ Chí Minh.</i>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663"> Điện thoại: </strong> Phòng Tư vấn tuyển sinh: <b style="color:orange">(028)3526 8799</b> hoặc
+                <b style="color:orange">(028)6252 3434</b>
+            </div>
+            <br>
+            <div>
+                <strong style="color: #003663"> Email: </strong> caodangfpt.hcm@fpt.edu.vn
+            </div>
+            <br>
+            <table class="table table-bordered">
+                <tr>
+                    <th>Lịch làm việc </th>
+                    <th>Sáng</th>
+                    <th>Chiều</th>
+                </tr>
+                <tr>
+                    <td>Thứ Hai đến Thứ Sáu</td>
+                    <td>8:00 - 12:00</td>
+                    <td>13:00 - 17:00</td>
+                </tr>
+                <tr>
+                    <td>Thứ Bảy</td>
+                    <td>8:00 - 12:00</td>
+                    <td>Nghỉ</td>
+                </tr>
+                <tr>
+                    <td>Chủ Nhật</td>
+                    <td>Nghỉ</td>
+                    <td>Nghỉ</td>
+                </tr>
+            </table>
+        </article>
+        <aside class="col-sm-4">
+            <h5>GÓP Ý TỪ BẠN</h5>
+            <form>
+                <label for="fullname">Họ Và Tên : <span>*</span></label> <br>
+                <input type="text" class="form-control" name="fullname" [(ngModel)]="inf.name" required minlength="4" #fullname="ngModel">
+                <div *ngIf="fullname.invalid && (fullname.dirty || fullname.touched)" class="col alert alert-danger" role="alert">
+                    Vui lòng điền họ và tên
+                </div>
+                <br>
+                <label for="phone">Điện Thoại : <span>*</span></label> <br>
+                <input type="number" class="form-control" name="phone" maxlength="11" [(ngModel)]="inf.phone" required #phone="ngModel">
+                <div *ngIf="phone.invalid  && (phone.dirty || phone.touched)" class="col alert alert-danger" role="alert">
+                    Vui lòng điền số điện thoại
+                </div>
+                <br>
+                <label for="email">Email : <span>*</span></label> <br>
+                <input  class="form-control"  pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$" name="email" [(ngModel)]="inf.email" required #email="ngModel">
+                <div *ngIf="email.invalid  && (email.dirty || email.touched)" class="col alert alert-danger" role="alert">
+                    Vui lòng điền email
+                </div>
+                <br>
+                <label for="gopy">Góp Ý : <span>*</span></label> <br>
+                <textarea  class="form-control" name="gopy" id="" cols="40" rows="5" [(ngModel)]="inf.gopy" required #gopy="ngModel"></textarea> 
+                <div *ngIf="gopy.invalid && (gopy.dirty || gopy.touched)" class="col alert alert-danger" role="alert">
+                    Góp ý cho chúng tôi 
+                </div>
+                <br>
+                <button class="btn btn-primary" (click)="onClick()">Gửi Yêu Cầu</button>
+                <div *ngIf="isShow" class="col alert alert-danger" role="alert">
+                     {{result}}
+                </div>
+            </form>
+        </aside>
+    </div>
+</div>

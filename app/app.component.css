@@ -1,0 +1,16 @@
+.navbar{
+    color : #fff;
+    background-color: teal;
+    position: relative;
+    border-left: 0.5px solid #f7941d;
+    border-right : 0.5px solid #f7941d;
+}
+.nav-item{
+    color: white;
+}
+footer {
+    color : #fff;
+    background-color: teal;
+    position: relative;
+    border: 1px solid #f7941d;
+}

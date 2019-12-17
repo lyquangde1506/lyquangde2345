@@ -1,0 +1,53 @@
+<div class="container">
+        <div class="row">
+                <article class="col-sm-9">
+                        <form class="col-sm-8" #userForm="ngForm" (ngSubmit)="submit(userForm)">
+                                <header class="text-center light">ĐĂNG NHẬP</header>
+                                <label for="uname">Username <span>*</span></label>
+                                <input id="uname" type="name" [(ngModel)]="user.uname" class="form-control" required
+                                        minlength="5" [ngModelOptions]="{standalone : true}" #uname="ngModel" />
+                                <div class="col alert alert-danger" role="alert"
+                                        *ngIf="uname.invalid && (uname.dirty || uname.touched)">
+                                        Username is required !
+                                </div>
+                                <div *ngIf="uname.errors">
+
+                                </div>
+                                <br>
+                                <label for="password">Password <span>*</span></label>
+                                <input id="pass" type="password" [(ngModel)]="user.password" class="form-control"
+                                        required [ngModelOptions]="{standalone : true}" #password="ngModel" />
+                                <div class="col alert alert-danger" role="alert"
+                                        *ngIf="password.invalid && (password.dirty || password.touched)">
+                                        Password is required !
+                                </div>
+                                <br>
+                                <div *ngIf="isShow" class="col alert alert-danger" role="alert">
+                                        {{result}}
+                                </div>
+                                <button type="submit" [disabled]="!userForm">Login</button>
+                        </form>
+                </article>
+                <aside class="col-sm-3">
+                        <div class="card">
+                                <div class="card-header">
+                                        <button (click)="show()" class="btn" style="background-color: skyblue;width: 100%"><i class="fas fa-list"></i> DANH MỤC</button>
+                                </div>
+                                <div *ngIf="showForm">
+                                        <a href="#" class="list-group-item">Kiểm thử cơ bản </a>
+                                        <a href="#" class="list-group-item">SQL Server</a>
+                                        <a href="#" class="list-group-item">Điện toán đám mây </a>
+                                        <a href="#" class="list-group-item">Lập trình PHP </a>
+                                        <a href="#" class="list-group-item">Lập trình Android nâng cao</a>
+                                        <a href="#" class="list-group-item">Lập trình Android cơ bản</a>
+                                        <a href="#" class="list-group-item">Thiết kế Layout</a>
+                                        <a href="#" class="list-group-item">Thiết kế giao diện Android</a>
+                                        <a href="#" class="list-group-item">Quản lý dự án với Aglie</a>
+                                        <a href="#" class="list-group-item">Internet Marketing </a>
+                                        <a href="#" class="list-group-item">Lập trình hướng đối tượng Java</a>
+                                        <a href="#" class="list-group-item">Lập trình ASP.NET</a>
+                                </div>
+                        </div>
+                </aside>
+        </div>
+</div>

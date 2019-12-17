@@ -1,0 +1,58 @@
+<div class="container">
+    <div *ngIf="show">
+        <div class="card">
+            <div class="card-header text-center" style="background-color:skyblue">
+                <strong style="color: red"> BẢNG KẾT QUẢ</strong>
+            </div>
+            <div class="card-body">
+                Số câu đã làm : <b>{{made}} / {{examSubjects.length}}</b> <br>
+                Số câu đúng : <b>{{caudung}}</b> <br>
+                Điểm : <b>{{diem | number:0}}</b> <br>
+                Xếp loại : <b>{{xeploai}}</b>
+            </div>
+            <div class="card-footer">
+                <small class="btn" type="submit" (click)="onBack()" style="background-color:skyblue;color: red"> <b>Về
+                        Môn Học</b></small>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="showe">
+        <div class="card">
+            <div class="card-header">
+                <i class="fas fa-th-list"></i> {{subjectId.Name}}
+                <span class="badge badge-light badge-pill float-right">
+                    <countdown style="color:red" [config]="{leftTime: 900 * 4}">
+                        <h6>$!h!:$!m!:$!s!</h6>
+                    </countdown>
+                </span>
+            </div>
+            <div class="card-body">
+                <p>{{index+1}} . {{examSubject.Text}}
+                </p>
+                <hr>
+                <div class="form-check" *ngFor="let answer of  examSubject.Answers">
+                    <input class="form-check-input" type="radio" (change)="radioChange(answer)"
+                        [checked]="answer.Completed" name="exampleRadios" id="exampleRadios-{{answer.Id}}"
+                        value="{{answer.Text}}">
+                    <label class="form-check-label" for="exampleRadios-{{answer.Id}}" (click)="Nopbai(answer.Id)">
+                        {{answer.Text}}
+                    </label>
+                </div>
+
+            </div>
+
+            <div class="card-footer text-muted">
+                MARK: {{index+1}}/{{examSubjects.length}}
+            </div>
+            <div class="footer">
+                <button class="btn btn-warning" style="float: left" [disabled]="index === 0"
+                    (click)="downExamSubject()"> <i class="fas fa-long-arrow-alt-left"></i> Back</button>
+                <button class="btn btn-primary" style="float: right" [disabled]="" (click)="upExamSubject()"> Next <i
+                        class="fas fa-long-arrow-alt-right"></i></button>
+            </div>
+        </div>
+        <div class="text-center">
+            <button style="width: 20%" class="btn btn-primary" (click)="getDiem()">Nộp bài</button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,100 @@
+<div class="container">
+  <app-header></app-header>
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#"><img src="/assets/images/logo.png" height="40px" alt=""></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item active">
+          <strong><a class="nav-link" style="color:white" [routerLink]="['/dangnhap']"><i class="fas fa-home"></i> Trang
+              Chủ <span class="sr-only">(current)</span></a></strong>
+        </li>
+        <li class="nav-item active">
+          <strong><a class="nav-link" style="color:white" [routerLink]="['gioithieu']"><i class="fas fa-bars"></i> Giới
+              Thiệu</a></strong>
+        </li>
+        <li class="nav-item active">
+          <strong> <a class="nav-link" style="color:white" [routerLink]="['lienhe']"><i class="fas fa-phone-volume"></i>
+              Liên Hệ</a></strong>
+        </li>
+        <li class="nav-item active">
+          <strong><a class="nav-link" style="color:white" [routerLink]="['gopy']"><i class="fas fa-envelope"></i> Góp
+              Ý</a></strong>
+        </li>
+        <li class="nav-item active">
+          <strong><a class="nav-link"><i class="fas fa-question-circle"></i> Hỏi Đáp</a></strong>
+        </li>
+      </ul>
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item dropdown active">
+          <a class="nav-link dropdown-toggle" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown"
+            aria-haspopup="true" aria-expanded="false">
+            <strong><i class="fas fa-user"></i> Tài Khoản </strong>
+          </a>
+          <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+            <a class="dropdown-item" [routerLink]="['/dangnhap']">Đăng Nhập</a>
+            <a class="dropdown-item">Đăng Ký</a>
+            <a class="dropdown-item">Quên Mật Khẩu</a>
+          </div>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br>
+  <router-outlet></router-outlet>
+  <br>
+  <footer>
+    <div class="card-footer">
+      <div class="row">
+        <div class="col-sm-4">
+          <img src="/assets/images/Poly.png" width="320px" height="150px" alt=""> <br><br>
+          <h4 style="color: #f7941d;">THÔNG TIN LIÊN HỆ</h4><br>
+          <small style="color: #f7941d;">Trụ sở chính</small> <br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Tầng 1, Tòa nhà FPT Polytechnic (nhà H), Hàm Nghi, Mỹ Đình, Nam Từ Liêm, Hà Nội <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i>  Điện thoại: (024) 7300 1955 – Email: caodang@fpt.edu.vn
+        </div>
+        <div class="col-sm-4">
+          <b style="text-decoration: underline; padding-top: 10px;">Cơ sở Hà Nội</b><br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Tòa nhà FPT Polytechnic (nhà H), Hàm Nghi, Mỹ
+          Đình, Nam Từ Liêm, Hà Nội <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (024) 7300 1955
+          <br>
+          <br>
+          <b style="text-decoration: underline; padding-top: 10px;">Cơ sở Đà Nẵng</b> <br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Số 137 Nguyễn Thị Thập, Phường Hòa Minh, Quận
+          Liên Chiểu, TP. Đà Nẵng <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (0236) 3710 999
+          <br>
+          <br>
+          <b style="text-decoration: underline; padding-top: 10px;">Cơ sở Cần Thơ</b><br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Số 288, Nguyễn Văn Linh, phường An Khánh, quận
+          Ninh Kiều, Tp. Cần Thơ. <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (0292) 7300 468
+          <br>
+        </div>
+        <div class="col-sm-4">
+          <b style="text-decoration: underline; padding-top: 10px;">Cơ sở Hồ Chí Minh</b> <br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> 391A Nam Kỳ Khởi Nghĩa, Q. 3, TP. Hồ Chí Minh
+          <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (028) 3526 8799 – (028) 62523434 <br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> 778/B1 Nguyễn Kiệm, P.4, Q. Phú Nhuận, TP. Hồ
+          Chí Minh <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (028) 3526 8799 – (028) 62523434 <br>
+
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Toà nhà Innovation, lô 24, Công viên phần mềm
+          Quang Trung, Quận 12, Hồ Chí Minh <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (028) 3526 8799 – (028) 62523434 <br>
+          <br>
+          <b style="text-decoration: underline; padding-top: 10px;"> Cơ sở Tây Nguyên</b> <br>
+          <i class="fas fa-map-marker-alt" style="color: #f7941d;"></i> Số 27, Tòa nhà VIB (Tầng 2), đường Nguyễn Tất
+          Thành, Tân Lợi, TP. Buôn Mê Thuột, Đắk Lắk <br>
+          <i class="fas fa-phone" style="color: #f7941d;"></i> (0262) 355 5678
+          <br>
+        </div>
+      </div>
+    </div>
+  </footer>
+</div>

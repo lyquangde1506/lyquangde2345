@@ -1,0 +1,13 @@
+.badge{
+    float: right;
+}
+button{
+    width: 100%;
+}
+a {
+  text-decoration: none;
+}
+.card-footer{
+    color:white;
+    background-color: skyblue;
+}

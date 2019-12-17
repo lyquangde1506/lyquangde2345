@@ -1,0 +1,38 @@
+<div class="container">
+    <div class="row">
+        <article class="col-sm-9">
+            <div class="container-fluid">
+                <div class="row">
+                    <div class="col-sm-4 card-prod text-center"
+                        *ngFor="let s of listsubjectId">
+                        <div class="card">
+                            <div class="card-body">
+                                <a [routerLink]="['/exam',s.Id]" class="thumbnail"><img src="assets/images/logos/{{s.Logo}}" /></a>
+                            </div>
+                            <div class="card-footer d-flex justify-content-center">
+                                <a [routerLink]="['/exam',s.Id]" style="color:black"> {{s.Name}}</a>
+                            </div>
+                        </div>
+                        <br>
+                    </div>
+                </div>
+            </div>
+        </article>
+        <br>
+        <aside class="col-sm-3">
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <strong><button (click)="show()" class="btn" style="background-color: skyblue"><i class="fas fa-list"></i> DANH MỤC
+                                MÔN </button></strong>
+                    </div>
+                </div>
+                <div *ngIf="showForm">
+                    <div *ngFor="let s of listsubjectId">
+                        <a [routerLink]="['/exam',s.Id]" class="list-group-item">{{s.Name}}</a>
+                    </div>
+                </div>
+            </div>
+        </aside>
+    </div>
+</div>
